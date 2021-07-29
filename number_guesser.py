@@ -29,11 +29,7 @@ for attempt in range(0, no_of_attempts):
             print(switcher[0][1])
 
     if attempt == 1:
-        divisors = []
-        for i in range(2, the_number):
-            if the_number % i == 0:
-                divisors.append(i)
-                continue
+        divisors = [i for i in range(2, the_number) if the_number % i == 0]
         length = len(divisors)-1
         choose = random.randint(0, length)
         the_divisor = divisors[choose]
